@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V7863NGWVM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V7863NGWVM');
+</script>
+    <meta charset="UTF-8">
+    <meta name="description" content="Rent an A-frame house, in the mountains">
+    <meta name="author" content="Keresztesi Tamas">
+    <meta name="keywords" content="A frame, inchiriat, cabana, casuta, ciubar, mountain, munti, romania, RO">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hideout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1>Welcome to The Hideout</h1>
+            <p>Your perfect A-frame house retreat</p>
+            <a href="#booking" class="btn">Book Now</a>
+        </div>
+    </header>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About The Hideout</h2>
+            <p>The Hideout is a luxurious A-frame house nestled in nature, offering a serene escape from the hustle and bustle of city life. Experience comfort, style, and tranquility in our beautifully designed space.</p>
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-images">
+                <img src="image1.jpg" alt="A-frame house exterior">
+                <img src="image2.jpg" alt="Cozy living room">
+                <img src="image3.jpg" alt="Modern kitchen">
+                <img src="image4.jpg" alt="Bedroom with a view">
+            </div>
+        </div>
+    </section>
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book Your Stay</h2>
+            <form action="process_booking.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" id="checkin" name="checkin" required>
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" id="checkout" name="checkout" required>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+            <p id="confirmation-message">
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    echo "Booking successfully recorded.";
+                }
+                ?>
+            </p>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 The Hideout. All rights reserved.</p>
+            <p>Contact us: info@thehideout.com | +123 456 7890</p>
+        </div>
+    </footer>
+</body>
+</html>
