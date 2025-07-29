@@ -16,9 +16,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } elseif ($checkin >= $checkout) {
         $message = "Check-out date must be after check-in date.";
     } else {
-        $servername = "sql310.byethost.com";
-        $username = "b18_33198858";
-        $password = "sobb1234V";
+        $servername = "XXXX";
+        $username = "XXXX";
+        $password = "XXXX";
         $dbname = "b18_33198858_hideout_booking";
 
         $conn = new mysqli($servername, $username, $password, $dbname);
