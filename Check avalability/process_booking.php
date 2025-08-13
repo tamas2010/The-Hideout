@@ -12,10 +12,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Generate a random order number
     $order_number = generateOrderNumber();
 
-    $servername = "sql310.byethost.com";
-    $username = "b18_33198858";
-    $password = "sobb1234V";
-    $dbname = "b18_33198858_hideout_booking";
+    $servername = "sql101.byethost14.com";
+    $username = "b14_38991357";
+    $password = "sobb1243V!";
+    $dbname = "b14_38991357_hideout_booking";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
